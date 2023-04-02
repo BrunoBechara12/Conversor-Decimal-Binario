@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <h1 class="titulo">Conversor de números Decimais para Binário</h1>
+
+    <div class="container">
+        <div class="inputContainer">
+            <input type="text" maxlength="9" onchange="converter(this.value)">
+        </div>
+        <div class="outputContainer">
+            <h1 id="result">0</h1>
+        </div>
+    </div>
+
+    <script>
+        function converter (num) {
+            var dec = parseInt(num)
+            var bin = dec.toString(2)
+           document.getElementById("result").innerText=bin
+        }
+    </script>
+</body>
+</html>
